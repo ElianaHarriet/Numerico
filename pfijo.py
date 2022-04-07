@@ -41,4 +41,4 @@ def punto_fijo(a, b, x0, err, k, f_func, g_func):
 
 # punto_fijo(1.5, 2, 1.75, 0.000001, 0.44, f_func_4, g_func_4) # 4 | Gráfico => https://www.geogebra.org/calculator/cemvnueb (espiral)
 # punto_fijo(1, 1.5, 1.25, 0.001, 0.36, f_func_5, g_func_5) # 5 | Gráfico => https://www.geogebra.org/calculator/qztgyww9 (escalera)
-punto_fijo(0, 1, 0.5, 10 ** -10, 0.84, f_func_7, g_func_7) # 7
+# punto_fijo(0, 1, 0.5, 10 ** -10, 0.84, f_func_7, g_func_7) # 7

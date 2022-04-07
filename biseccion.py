@@ -44,4 +44,3 @@ def bisection(a, b, err, func):
 # bisection(0 + 10 ** -10, 1.6 - 10 ** -10, 0.02, func_2a) # 2a
 # bisection(0 + 10 ** -10, 1.6 - 10 ** -10, 0.02, func_2b) # 2b
 bisection(0 + 10 ** -10, 1.6 - 10 ** -10, 0.02, func_2c) # 2c
-
