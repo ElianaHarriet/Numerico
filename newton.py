@@ -49,6 +49,20 @@ def fprim_func_15(x):
 	return 3 * (x ** 2) - 3.8 * x + 1.05
 
 
+def f_func_20a(x):
+	return 2 * x + 10 * log(1 - 0.1 * x, e)
+
+def fprim_func_20a(x):
+	return 2 - (1 - 0.1 * x) ** -1
+
+
+def f_func_20b(x):
+	return 4 * x + 10 * log(1 - 0.1 * x, e)
+
+def fprim_func_20b(x):
+	return 4 - (1 - 0.1 * x) ** -1
+
+
 def newton_raphson(x0, err, f_func, fprim_func):
 	print(f"\n- - - - Newton-Raphson - - - -\nx0 = {x0}\n")
 	i = 0
@@ -65,6 +79,9 @@ def newton_raphson(x0, err, f_func, fprim_func):
 			print("Error: No converge")
 			print("- - - - - - - - - - - - - - - -\n")
 			return False
+	x0 = x1
+	i += 1
+	print(f"P{i} = P{i - 1} - (f(P{i - 1}) / f'(P{i - 1})) = {x0} \t| f(P{i}) = {f_func(x0)}\n")
 	return True
 
 
@@ -95,4 +112,6 @@ def main(a, b, err, f_func, fprim_func):
 # newton_raphson(1.5, 10 ** -10, f_func_10, fprim_func_10) # 10
 # newton_raphson(1.5, 0.001, f_func_12, fprim_func_12) # 12
 # newton_raphson(-9, 10 ** -6, f_func_14, fprim_func_14) # 14
-newton_raphson(-1, 10 ** -6, f_func_15, fprim_func_15) # 15
+# newton_raphson(-1, 10 ** -6, f_func_15, fprim_func_15) # 15
+# newton_raphson(7.75, 0.01, f_func_20a, fprim_func_20a) # 20 a
+newton_raphson(9.75, 1/100, f_func_20b, fprim_func_20b) # 20 b

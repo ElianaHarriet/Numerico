@@ -31,6 +31,9 @@ def newton_raphson_mul(x0, err, f_func, fprim_func, fprimprim_func):
 			print("Error: No converge")
 			print("- - - - - - - - - - - - - - - -\n")
 			return False
+	x0 = x1
+	i += 1
+	print(f"P{i} = {x0} \t| f(P{i}) = {f_func(x0)}\n")
 	return True
 
 
